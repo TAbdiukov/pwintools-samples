@@ -3,7 +3,7 @@
 from pwintools import *
 
 print("Opening  tube...")
-p = serialtube(port="COM4")
+p = SerialTube(port="COM4")
 print("Entering loop...")
 while(1):
 	buf = p.recvline()
@@ -15,4 +15,4 @@ while(1):
 	s2 = str(n2)
 	ans = "R!Recv num: "+s1+". x + 1 = "+s2
 	print(ans)
-	p.send_raw(ans)
+	p.send(ans)
