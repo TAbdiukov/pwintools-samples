@@ -9,5 +9,5 @@ How to:
 3. download & install "COM Port Data Emulator", set it up to
     * Use one of two ports (eg COM3)
     * (by default) Generate: random text
-    ! Start (bottom right corner)
-4. Run this text script
+4. Start "COM Port Data Emulator" (bottom right corner)
+5. Run this text script
