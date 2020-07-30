@@ -14,6 +14,7 @@ How to:
 
 from pwintools import *
 
+print("Opening  tube...")
 p = serialtube(port="COM4")
 print("Entering loop...")
 while(1):
@@ -24,6 +25,6 @@ while(1):
     n1 = int(s1)
     n2 = n1 + 1
     s2 = str(n2)
-    ans = "Recv number: "+s1+". This + 1 = "+s2
+    ans = "R!Recv num: "+s1+". x + 1 = "+s2
     print(ans)
     p.send_raw(ans)
