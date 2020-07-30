@@ -1,7 +1,6 @@
-# pwintools-samples
-quick&amp;dirty scripts to facilitate pwnTools port for windows
+#python2
 
-## Serial
+"""
 Simple test program for "pwintools"
 How to:
 1. download & install "com0com",
@@ -11,3 +10,20 @@ How to:
     * (by default) Generate: random text
     ! Start (bottom right corner)
 4. Run this text script
+"""
+
+from pwintools import *
+
+p = serialtube(port="COM4")
+print("Entering loop...")
+while(1):
+    buf = p.recvline()
+    assert(len(buf))
+    soup = buf.split(' ')
+    s1 = soup[3]
+    n1 = int(s1)
+    n2 = n1 + 1
+    s2 = str(n2)
+    ans = "Recv number: "+s1+". This + 1 = "+s2
+    print(ans)
+    p.send_raw(ans)
