@@ -1,4 +1,5 @@
 #!python2
+# -*- coding: utf8 -*-
 
 from pwintools import *
 
